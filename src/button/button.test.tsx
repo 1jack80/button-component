@@ -29,7 +29,7 @@ describe("testing various button functionalities", () => {
 	});
 
 	it("should accept color prop values", () => {
-		render(<Button color="danger">button</Button>);
+		render(<Button color="primary">button</Button>);
 		expect(screen.getByText("button")).toHaveAttribute("data-color");
 	});
 });
