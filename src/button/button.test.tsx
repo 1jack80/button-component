@@ -22,4 +22,9 @@ describe("testing various button functionalities", () => {
 		render(<Button disabled>button</Button>);
 		expect(screen.getByText("button")).toBeDisabled();
 	});
+
+	it("should accept size prop values", () => {
+		render(<Button size="lg">button</Button>);
+		expect(screen.getByText("button")).toHaveAttribute("data-size");
+	});
 });

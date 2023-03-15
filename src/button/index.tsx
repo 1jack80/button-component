@@ -4,6 +4,7 @@ interface BtnProps {
 	children?: ReactNode;
 	variant?: "text" | "outline";
 	disabled?: boolean;
+	size?: "sm" | "md" | "lg";
 }
 
 const Button = forwardRef(function (
@@ -16,6 +17,7 @@ const Button = forwardRef(function (
 				ref={ref}
 				data-variant={props.variant}
 				disabled={props.disabled ?? false}
+				data-size={props.size}
 			>
 				{props.children}
 			</button>
