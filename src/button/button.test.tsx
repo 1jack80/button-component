@@ -15,7 +15,11 @@ describe("testing various button functionalities", () => {
 
 	it("should accept different variants", () => {
 		render(<Button variant="outline">button</Button>);
-		screen.debug();
 		expect(screen.getByText("button")).toHaveAttribute("data-variant");
+	});
+
+	it("should be disabled when the disabled prop is given", () => {
+		render(<Button disabled>button</Button>);
+		expect(screen.getByText("button")).toBeDisabled();
 	});
 });

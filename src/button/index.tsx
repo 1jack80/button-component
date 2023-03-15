@@ -3,6 +3,7 @@ import React, { forwardRef, LegacyRef, ReactNode } from "react";
 interface BtnProps {
 	children?: ReactNode;
 	variant?: "text" | "outline";
+	disabled?: boolean;
 }
 
 const Button = forwardRef(function (
@@ -14,6 +15,7 @@ const Button = forwardRef(function (
 			<button
 				ref={ref}
 				data-variant={props.variant}
+				disabled={props.disabled ?? false}
 			>
 				{props.children}
 			</button>
