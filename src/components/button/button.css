@@ -1,0 +1,22 @@
+.button {
+	@apply bg-[#E0E0E0] text-[#3F3F3F] px-4 py-2 w-max rounded-md;
+}
+.button:hover,
+.button:focus {
+	@apply bg-[#AEAEAE] text-[#3F3F3F];
+}
+
+.button:disabled {
+	@apply text-[#9E9E9E] bg-[#E0E0E0];
+}
+
+.button[data-variant="outline"] {
+	@apply bg-transparent ring-1 ring-current;
+}
+
+.button[data-variant="text"] {
+	@apply bg-transparent border-none;
+}
+.button:not(:disabled)[data-variant="text"]:hover {
+	@apply bg-[#E0E0E0];
+}
