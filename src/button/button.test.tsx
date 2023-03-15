@@ -27,4 +27,9 @@ describe("testing various button functionalities", () => {
 		render(<Button size="lg">button</Button>);
 		expect(screen.getByText("button")).toHaveAttribute("data-size");
 	});
+
+	it("should accept color prop values", () => {
+		render(<Button color="danger">button</Button>);
+		expect(screen.getByText("button")).toHaveAttribute("data-color");
+	});
 });

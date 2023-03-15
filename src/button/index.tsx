@@ -5,6 +5,7 @@ interface BtnProps {
 	variant?: "text" | "outline";
 	disabled?: boolean;
 	size?: "sm" | "md" | "lg";
+	color?: "default" | "primary" | "secondary" | "danger";
 }
 
 const Button = forwardRef(function (
@@ -18,6 +19,7 @@ const Button = forwardRef(function (
 				data-variant={props.variant}
 				disabled={props.disabled ?? false}
 				data-size={props.size}
+				data-color={props.color}
 			>
 				{props.children}
 			</button>
