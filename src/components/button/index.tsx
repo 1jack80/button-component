@@ -8,6 +8,8 @@ interface BtnProps {
 	size?: "sm" | "md" | "lg";
 	color?: "default" | "primary" | "secondary" | "danger";
 	disableShadow?: boolean;
+	startIcon?: string;
+	endIcon?: string;
 }
 
 const Button = forwardRef(function (

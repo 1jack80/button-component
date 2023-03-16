@@ -21,7 +21,7 @@ body {
 .button {
 	@apply w-max px-[1em] py-[0.5em] rounded-md bg-[var(--default-bg)] shadow-md shadow-[var(--default-focus)] text-[var(--default-text)] inline-block;
 
-	@apply hover:bg-[var(--default-focus)] focus:bg-[var(--default-focus)] focus:outline-none;
+	@apply hover:bg-[var(--default-focus)] active:bg-[var(--default-bg)];
 }
 
 .button[data-variant="outline"] {

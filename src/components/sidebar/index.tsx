@@ -6,13 +6,17 @@ const bg2 = "linear-gradient(0deg, #F7542E, #F7542E);";
 
 const Sidebar = () => {
 	return (
-		<section className="bg-[#FAFBFD] w-max py-16 px-12">
+		<section className=" w-max ">
 			<h5 className="logo text-xl font-semibold w-max">
 				<span className="text-[#F7542E]">Dev</span>
 				<span className="text-[#090F31]">challenges.io</span>
 			</h5>
 			<section className="flex flex-col gap-6 mt-16">
-				<Button variant="outline">Colors</Button>
+				<Button
+					variant="text"
+					disabled>
+					Colors
+				</Button>
 				<Button
 					variant="text"
 					disabled>
