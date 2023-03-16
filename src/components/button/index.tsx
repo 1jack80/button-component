@@ -1,4 +1,5 @@
 import React, { forwardRef, LegacyRef, ReactNode } from "react";
+import "./button.css";
 
 interface BtnProps {
 	children?: ReactNode;
@@ -15,12 +16,12 @@ const Button = forwardRef(function (
 	return (
 		<>
 			<button
+				className="button"
 				ref={ref}
 				data-variant={props.variant}
 				disabled={props.disabled ?? false}
 				data-size={props.size}
-				data-color={props.color}
-			>
+				data-color={props.color}>
 				{props.children}
 			</button>
 		</>

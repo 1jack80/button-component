@@ -1,22 +1,23 @@
+body {
+	--default-text: #3f3f3f;
+	--default-bg: #e0e0e0;
+	--default-focus: #aeaeae;
+
+	--disabled: #e0e0e0;
+	--disabled-text: #9e9e9e;
+
+	--white-text: #ffffff;
+
+	--primary: #3d5afe;
+	--primary-focus: #2962ff1a;
+
+	--secondary: #455a64;
+	--secondary-focus: #455a641a;
+
+	--danger: #d32f2f;
+	--danger-focus: #d32f2f1a;
+}
+
 .button {
-	@apply bg-[#E0E0E0] text-[#3F3F3F] px-4 py-2 w-max rounded-md;
-}
-.button:hover,
-.button:focus {
-	@apply bg-[#AEAEAE] text-[#3F3F3F];
-}
-
-.button:disabled {
-	@apply text-[#9E9E9E] bg-[#E0E0E0];
-}
-
-.button[data-variant="outline"] {
-	@apply bg-transparent ring-1 ring-current;
-}
-
-.button[data-variant="text"] {
-	@apply bg-transparent border-none;
-}
-.button:not(:disabled)[data-variant="text"]:hover {
-	@apply bg-[#E0E0E0];
+	@apply w-max px-[0.8em] py-[0.4em] rounded-lg bg-[var(--default-bg)] hover:bg-[var(--default-focus)] focus:bg-[var(--default-focus)] focus:outline-transparent focus:border-transparent;
 }
