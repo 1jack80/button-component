@@ -19,5 +19,5 @@ body {
 }
 
 .button {
-	@apply w-max px-[0.8em] py-[0.4em] rounded-lg bg-[var(--default-bg)] hover:bg-[var(--default-focus)] focus:bg-[var(--default-focus)] focus:outline-transparent focus:border-transparent;
+	@apply w-max px-[1em] py-[0.5em] rounded-lg bg-[var(--default-bg)] hover:bg-[var(--default-focus)] focus:bg-[var(--default-focus)] focus:outline-none focus:border-transparent;
 }
