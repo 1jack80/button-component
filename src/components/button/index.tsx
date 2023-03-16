@@ -7,6 +7,7 @@ interface BtnProps {
 	disabled?: boolean;
 	size?: "sm" | "md" | "lg";
 	color?: "default" | "primary" | "secondary" | "danger";
+	disableShadow?: boolean;
 }
 
 const Button = forwardRef(function (
@@ -20,7 +21,9 @@ const Button = forwardRef(function (
 				ref={ref}
 				data-variant={props.variant}
 				disabled={props.disabled ?? false}
+				// Todo: set aria disabled when button is disabled
 				data-size={props.size}
+				data-disableShadow={props.disableShadow}
 				data-color={props.color}>
 				{props.children}
 			</button>

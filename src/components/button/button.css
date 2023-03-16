@@ -19,5 +19,58 @@ body {
 }
 
 .button {
-	@apply w-max px-[1em] py-[0.5em] rounded-lg bg-[var(--default-bg)] hover:bg-[var(--default-focus)] focus:bg-[var(--default-focus)] focus:outline-none focus:border-transparent;
+	@apply w-max rounded-md bg-[var(--default-bg)] shadow-md shadow-slate-200;
+	padding: 0.4em 0.8em;
+
+	@apply hover:bg-[var(--default-focus)] focus:bg-[var(--default-focus)] focus:outline-none;
+}
+
+.button[data-variant="outline"] {
+	@apply bg-transparent border border-[var(--default-focus)];
+
+	@apply hover:bg-[var(--default-focus)] focus:bg-[var(--default-focus)] focus:outline-none;
+}
+
+.button[data-variant="text"] {
+	@apply bg-transparent shadow-none;
+
+	@apply hover:bg-[var(--default-focus)] focus:bg-[var(--default-focus)] focus:outline-none;
+}
+
+.button[data-disableShadow="true"] {
+	@apply shadow-none;
+}
+
+.button:disabled {
+	@apply bg-[var(--disabled)] text-[var(--disabled-text)];
+
+	@apply hover:bg-[var(--disabled)];
+}
+
+.button:disabled[data-variant="outline"],
+.button:disabled[data-variant="text"] {
+	@apply bg-transparent;
+}
+
+.button[data-size="sm"] {
+	@apply text-sm;
+}
+.button[data-size="lg"] {
+	@apply text-lg;
+}
+
+.button[data-color="danger"] {
+	--default-text: var(--white-text);
+	--default-bg: var(--danger);
+	--default-focus: var(--danger-focus);
+}
+.button[data-color="primary"] {
+	--default-text: var(--white-text);
+	--default-bg: var(--primary);
+	--default-focus: var(--primary-focus);
+}
+.button[data-color="secondary"] {
+	--default-text: var(--white-text);
+	--default-bg: var(--secondary);
+	--default-focus: var(--secondary-focus);
 }

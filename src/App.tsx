@@ -27,9 +27,11 @@ function App() {
 			</Button>
 			<Button startIcon="local_grocery_store">button startIcon</Button>
 			<Button endIcon="local_grocery_store"> button endIcon</Button>
-			<Button size="sm"> button sm</Button>
-			<Button size="md"> button md</Button>
-			<Button size="lg"> button lg</Button>
+			<div className="flex gap-8">
+				<Button size="sm"> button sm</Button>
+				<Button size="md"> button md</Button>
+				<Button size="lg"> button lg</Button>
+			</div>
 			<Button color="default"> button default</Button>
 			<Button color="primary"> button primary</Button>
 			<Button color="secondary"> button secondary </Button>
