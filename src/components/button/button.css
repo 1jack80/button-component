@@ -9,18 +9,17 @@ body {
 	--white-text: #ffffff;
 
 	--primary: #3d5afe;
-	--primary-focus: #2962ff1a;
+	--primary-focus: hsl(224, 100%, 38%);
 
 	--secondary: #455a64;
-	--secondary-focus: #455a641a;
+	--secondary-focus: hsl(199, 18%, 23%);
 
 	--danger: #d32f2f;
-	--danger-focus: #d32f2f1a;
+	--danger-focus: hsl(0, 65%, 41%);
 }
 
 .button {
-	@apply w-max rounded-md bg-[var(--default-bg)] shadow-md shadow-slate-200;
-	padding: 0.4em 0.8em;
+	@apply w-max px-[1em] py-[0.5em] rounded-md bg-[var(--default-bg)] shadow-md shadow-[var(--default-focus)] text-[var(--default-text)] inline-block;
 
 	@apply hover:bg-[var(--default-focus)] focus:bg-[var(--default-focus)] focus:outline-none;
 }

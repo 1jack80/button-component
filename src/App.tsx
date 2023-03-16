@@ -32,10 +32,12 @@ function App() {
 				<Button size="md"> button md</Button>
 				<Button size="lg"> button lg</Button>
 			</div>
-			<Button color="default"> button default</Button>
-			<Button color="primary"> button primary</Button>
-			<Button color="secondary"> button secondary </Button>
-			<Button color="danger"> button danger</Button>
+			<div className="flex gap-8">
+				<Button color="default"> button default</Button>
+				<Button color="primary"> button primary</Button>
+				<Button color="secondary"> button secondary </Button>
+				<Button color="danger"> button danger</Button>
+			</div>
 		</div>
 	);
 }
