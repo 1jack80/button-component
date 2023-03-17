@@ -1,43 +1,62 @@
 body {
-	--default-text: #3f3f3f;
-	--default-bg: #e0e0e0;
-	--default-focus: #aeaeae;
+	--default-text: 0, 0%, 25%;
+	--default-bg: 0, 0%, 88%;
+	--default-focus: 0, 0%, 68%;
 
-	--disabled: #e0e0e0;
-	--disabled-text: #9e9e9e;
+	--disabled: 0, 0%, 88%;
+	--disabled-text: 0, 0%, 62%;
 
-	--white-text: #ffffff;
+	--white-text: 0, 0%, 100%;
 
-	--primary: #3d5afe;
-	--primary-focus: hsl(224, 100%, 38%);
+	--primary: 231, 99%, 62%;
+	--primary-focus: 224, 100%, 38%;
 
-	--secondary: #455a64;
-	--secondary-focus: hsl(199, 18%, 23%);
+	--secondary: 199, 18%, 33%;
+	--secondary-focus: 199, 18%, 23%;
 
-	--danger: #d32f2f;
-	--danger-focus: hsl(0, 65%, 41%);
+	--danger: 0, 65%, 51%;
+	--danger-focus: 0, 65%, 41%;
 }
 
 p {
 	@apply text-sm mb-4;
 }
-
-.button {
-	@apply w-max px-[1em] py-[0.5em] rounded-md bg-[var(--default-bg)] shadow-md shadow-[var(--default-focus)] text-[var(--default-text)] inline-block;
-
-	@apply hover:bg-[var(--default-focus)] active:bg-[var(--default-bg)];
+.hover-state {
+	@apply text-neutral-500;
 }
 
-.button[data-variant="outline"] {
-	@apply bg-transparent border border-[var(--default-focus)];
+.button {
+	@apply w-max px-[1em] py-[0.4em] rounded-md inline-block;
 
-	@apply hover:bg-[var(--default-focus)] focus:bg-[var(--default-focus)] focus:outline-none;
+	background-color: hsla(var(--default-text), 0.3);
+	box-shadow: 0 1px hsla(var(--default-text), 0.2);
+	color: hsla(var(--default-text));
+}
+.button:hover {
+	background-color: hsla(var(--default-text), 0.5);
+}
+.button:active {
+	background-color: hsla(var(--default-text), 0.3);
+}
+.button[data-variant="outline"] {
+	@apply bg-transparent border;
+	border: 1px solid hsla(var(--default-text), 0.4);
+}
+.button[data-variant="outline"]:hover {
+	background-color: hsla(var(--default-text), 0.5);
+}
+.button[data-variant="outline"]:active {
+	background-color: hsla(var(--default-text), 0.3);
 }
 
 .button[data-variant="text"] {
 	@apply bg-transparent shadow-none;
-
-	@apply hover:bg-[var(--default-focus)] focus:bg-[var(--default-focus)] focus:outline-none;
+}
+.button[data-variant="text"]:hover {
+	background-color: hsla(var(--default-text), 0.4);
+}
+.button[data-variant="text"]:active {
+	background-color: hsla(var(--default-text), 0.3);
 }
 
 .button[data-disableShadow="true"] {
@@ -55,6 +74,7 @@ p {
 	@apply bg-transparent;
 }
 
+/* 
 .button[data-size="sm"] {
 	@apply text-sm;
 }
@@ -91,4 +111,5 @@ p {
 .button[data-color="danger"][data-variant="outline"],
 .button[data-color="primary"][data-variant="outline"],
 .button[data-color="secondary"][data-variant="outline"] {
-}
+	--
+} */

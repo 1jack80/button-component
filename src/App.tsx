@@ -17,18 +17,18 @@ function App() {
 				<h3 className="text-3xl text-gray-600">Buttons</h3>
 				<div className="flex flex-col gap-16 text-neutral-800 ">
 					<article className="flex gap-32">
-						<div className="grid gap-4 ">
+						<div className="grid gap-2 ">
 							<p className="text-sm">{"<Button />"}</p>
 							<Button> button </Button>
 						</div>
-						<div className="grid gap-4 text-neutral-500">
+						<div className="hover-state">
 							<p className="text-sm">{"&:hover, &:focus"}</p>
 							<Button> button </Button>
 						</div>
 					</article>
 					<article className="flex gap-32">
 						<div>
-							<p>{"<Button variant outline />"}</p>
+							<p>{'<Button variant="outline" />'}</p>
 							<Button
 								variant="outline"
 								color="primary">
@@ -37,23 +37,38 @@ function App() {
 							</Button>
 						</div>
 						<div>
-							<p>{"<Button variant outline"}</p>
-							<Button variant="outline">Default</Button>
+							<p className="hover-state">{"&:hover, &:focus"}</p>
+							<Button
+								variant="outline"
+								color="primary">
+								Default
+							</Button>
+						</div>
+					</article>
+					<article className="flex gap-32">
+						<div>
+							<p>{'<Button variant="text" />'}</p>
+							<Button variant="text">Default</Button>
+						</div>
+						<div>
+							<p className="hover-state">{"&:hover, &:focus"}</p>
+							<Button
+								variant="text"
+								color="primary">
+								Default
+							</Button>
 						</div>
 					</article>
 					<article>
 						<div>
-							<Button variant="text"> button text</Button>
+							<p>{"<Button disableShadow />"}</p>
+							<Button disableShadow>Default</Button>
 						</div>
 					</article>
 					<article>
 						<div>
-							<Button disableShadow> button disableShadow</Button>
-						</div>
-					</article>
-					<article>
-						<div>
-							<Button disabled> button disabled</Button>
+							<p>{"<Button disabled />"}</p>
+							<Button disabled>Disabled</Button>
 						</div>
 					</article>
 					<Button
