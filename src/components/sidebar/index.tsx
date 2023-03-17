@@ -6,7 +6,7 @@ const bg2 = "linear-gradient(0deg, #F7542E, #F7542E);";
 
 const Sidebar = () => {
 	return (
-		<section className=" w-max ">
+		<section className=" w-max sticky top-16">
 			<h5 className="logo text-xl font-semibold w-max">
 				<span className="text-[#F7542E]">Dev</span>
 				<span className="text-[#090F31]">challenges.io</span>

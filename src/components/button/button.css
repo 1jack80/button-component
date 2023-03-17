@@ -18,6 +18,10 @@ body {
 	--danger-focus: hsl(0, 65%, 41%);
 }
 
+p {
+	@apply text-sm mb-4;
+}
+
 .button {
 	@apply w-max px-[1em] py-[0.5em] rounded-md bg-[var(--default-bg)] shadow-md shadow-[var(--default-focus)] text-[var(--default-text)] inline-block;
 
@@ -72,4 +76,19 @@ body {
 	--default-text: var(--white-text);
 	--default-bg: var(--secondary);
 	--default-focus: var(--secondary-focus);
+}
+
+.button[data-color="danger"][data-variant="outline"] {
+	--default-text: var(--danger);
+}
+.button[data-color="primary"][data-variant="outline"] {
+	--default-text: var(--primary);
+}
+.button[data-color="secondary"][data-variant="outline"] {
+	--default-text: var(--secondary);
+}
+
+.button[data-color="danger"][data-variant="outline"],
+.button[data-color="primary"][data-variant="outline"],
+.button[data-color="secondary"][data-variant="outline"] {
 }

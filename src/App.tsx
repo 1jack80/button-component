@@ -15,12 +15,47 @@ function App() {
 
 			<section className="px-44 py-16 flex flex-col gap-16">
 				<h3 className="text-3xl text-gray-600">Buttons</h3>
-				<div className="flex flex-col gap-16">
-					<Button> button </Button>
-					<Button variant="outline"> button outline </Button>
-					<Button variant="text"> button text</Button>
-					<Button disableShadow> button disableShadow</Button>
-					<Button disabled> button disabled</Button>
+				<div className="flex flex-col gap-16 text-neutral-800 ">
+					<article className="flex gap-32">
+						<div className="grid gap-4 ">
+							<p className="text-sm">{"<Button />"}</p>
+							<Button> button </Button>
+						</div>
+						<div className="grid gap-4 text-neutral-500">
+							<p className="text-sm">{"&:hover, &:focus"}</p>
+							<Button> button </Button>
+						</div>
+					</article>
+					<article className="flex gap-32">
+						<div>
+							<p>{"<Button variant outline />"}</p>
+							<Button
+								variant="outline"
+								color="primary">
+								{" "}
+								Default
+							</Button>
+						</div>
+						<div>
+							<p>{"<Button variant outline"}</p>
+							<Button variant="outline">Default</Button>
+						</div>
+					</article>
+					<article>
+						<div>
+							<Button variant="text"> button text</Button>
+						</div>
+					</article>
+					<article>
+						<div>
+							<Button disableShadow> button disableShadow</Button>
+						</div>
+					</article>
+					<article>
+						<div>
+							<Button disabled> button disabled</Button>
+						</div>
+					</article>
 					<Button
 						disabled
 						variant="text">
