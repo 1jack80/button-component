@@ -10,6 +10,7 @@ interface BtnProps {
 	disableShadow?: boolean;
 	startIcon?: string;
 	endIcon?: string;
+	className?: string;
 }
 
 const Button = forwardRef(function (
@@ -19,7 +20,7 @@ const Button = forwardRef(function (
 	return (
 		<>
 			<button
-				className="button"
+				className={`button ${props.className}`}
 				ref={ref}
 				data-variant={props.variant}
 				disabled={props.disabled ?? false}

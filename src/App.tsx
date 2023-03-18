@@ -23,9 +23,10 @@ function App() {
 						</div>
 						<div className="hover-state">
 							<p className="text-sm">{"&:hover, &:focus"}</p>
-							<Button> button </Button>
+							<Button className="hover"> button </Button>
 						</div>
 					</article>
+
 					<article className="flex gap-32">
 						<div>
 							<p>{'<Button variant="outline" />'}</p>
@@ -39,12 +40,14 @@ function App() {
 						<div>
 							<p className="hover-state">{"&:hover, &:focus"}</p>
 							<Button
+								className="hover"
 								variant="outline"
 								color="primary">
 								Default
 							</Button>
 						</div>
 					</article>
+
 					<article className="flex gap-32">
 						<div>
 							<p>{'<Button variant="text" />'}</p>
@@ -53,46 +56,84 @@ function App() {
 						<div>
 							<p className="hover-state">{"&:hover, &:focus"}</p>
 							<Button
+								className="hover"
 								variant="text"
 								color="primary">
 								Default
 							</Button>
 						</div>
 					</article>
+
 					<article>
 						<div>
 							<p>{"<Button disableShadow />"}</p>
 							<Button disableShadow>Default</Button>
 						</div>
 					</article>
-					<article>
+
+					<article className="flex gap-32">
 						<div>
 							<p>{"<Button disabled />"}</p>
 							<Button disabled>Disabled</Button>
 						</div>
+						<div>
+							<p className="hover-state">{"<Button variant='text' disabled />"}</p>
+							<Button
+								disabled
+								variant="text">
+								Disabled
+							</Button>
+						</div>
 					</article>
-					<Button
-						disabled
-						variant="text">
-						button disabled variant=text
-					</Button>
-					<Button
-						disabled
-						variant="outline">
-						button disabled variant=outline
-					</Button>
-					<Button startIcon="local_grocery_store">button startIcon</Button>
-					<Button endIcon="local_grocery_store"> button endIcon</Button>
+
+					<article className="flex gap-32">
+						<Button startIcon="local_grocery_store">Default</Button>
+						<Button endIcon="local_grocery_store">Default</Button>
+					</article>
+
 					<div className="flex gap-8">
-						<Button size="sm"> button sm</Button>
-						<Button size="md"> button md</Button>
-						<Button size="lg"> button lg</Button>
+						<div>
+							<p>{'<Button size="sm" />'}</p>
+							<Button
+								size="sm"
+								color="primary">
+								Default
+							</Button>
+						</div>
+						<div>
+							<p>{'<Button size="md" />'}</p>
+							<Button
+								size="md"
+								color="primary">
+								Default
+							</Button>
+						</div>
+						<div>
+							<p>{'<Button size="lg" />'}</p>
+							<Button
+								size="lg"
+								color="primary">
+								Default
+							</Button>
+						</div>
 					</div>
 					<div className="flex gap-8">
-						<Button color="default"> button default</Button>
-						<Button color="primary"> button primary</Button>
-						<Button color="secondary"> button secondary </Button>
-						<Button color="danger"> button danger</Button>
+						<div>
+							<p>{'<Button color="default" />'}</p>
+							<Button color="default">Default</Button>
+						</div>
+						<div>
+							<p>{'<Button color="primary" />'}</p>
+							<Button color="primary">Default</Button>
+						</div>
+						<div>
+							<p>{'<Button color="secondary" />'}</p>
+							<Button color="secondary">Default</Button>
+						</div>
+						<div>
+							<p>{'<Button color="danger" />'}</p>
+							<Button color="danger">Default</Button>
+						</div>
 					</div>
 				</div>
 			</section>
