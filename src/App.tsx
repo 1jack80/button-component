@@ -13,7 +13,7 @@ function App() {
 				<Sidebar />
 			</div>
 
-			<section className="px-44 py-16 flex flex-col gap-16">
+			<section className="px-20 py-16 flex flex-col gap-16">
 				<h3 className="text-3xl text-gray-600">Buttons</h3>
 				<div className="flex flex-col gap-16 text-neutral-800 ">
 					<article className="grid grid-cols-4 gap-5 items-end">
@@ -96,16 +96,22 @@ function App() {
 					</article>
 
 					<article className="grid grid-cols-4 gap-5 items-end">
-						<Button
-							color="primary"
-							startIcon="local_grocery_store">
-							Default
-						</Button>
-						<Button
-							color="primary"
-							endIcon="local_grocery_store">
-							Default
-						</Button>
+						<div>
+							<p>{'<Button startIcon="local grocery store" />'}</p>
+							<Button
+								color="primary"
+								startIcon="local_grocery_store">
+								Default
+							</Button>
+						</div>
+						<div>
+							<p>{'<Button endIcon="local grocery store" />'}</p>
+							<Button
+								color="primary"
+								endIcon="local_grocery_store">
+								Default
+							</Button>
+						</div>
 					</article>
 
 					<div className="grid grid-cols-4 gap-5 items-end">
@@ -152,7 +158,7 @@ function App() {
 							<Button color="danger">Default</Button>
 						</div>
 					</div>
-					<div className="grid grid-cols-4 gap-8 items-end">
+					<div className="grid grid-cols-4 gap-5 items-end">
 						<div>
 							<p className="hover-state">{"&hover; &focus"}</p>
 							<Button

@@ -117,6 +117,3 @@ p {
 .button[data-color="secondary"][data-variant="text"] {
 	--default-text: var(--primary);
 }
-
-.button[data-color="primary"][data-variant="text"] {
-}
