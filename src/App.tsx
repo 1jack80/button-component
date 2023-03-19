@@ -197,10 +197,15 @@ function App() {
 							created by{" "}
 							<a
 								href="github.com/1jack80"
-								className="text-blue-800">
+								className="text-slate-800">
 								1jack80
 							</a>{" "}
-							- devChallenges.io
+							-{" "}
+							<a
+								className="text-slate-800"
+								href="devChallenges.io">
+								devChallenges.io
+							</a>
 						</p>
 					</footer>
 				</section>
