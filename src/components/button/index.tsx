@@ -28,7 +28,13 @@ const Button = forwardRef(function (
 				data-size={props.size}
 				data-disableShadow={props.disableShadow}
 				data-color={props.color}>
+				{props.startIcon ? (
+					<span className={`material-icons-round`}>{props.startIcon}</span>
+				) : null}
 				{props.children}
+				{props.endIcon ? (
+					<span className={`material-icons-round`}>{props.endIcon}</span>
+				) : null}
 			</button>
 		</>
 	);

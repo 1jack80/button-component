@@ -32,4 +32,10 @@ describe("testing various button functionalities", () => {
 		render(<Button color="primary">button</Button>);
 		expect(screen.getByText("button")).toHaveAttribute("data-color");
 	});
+
+	it("should render the icons given", () => {
+		render(<Button endIcon="done">button</Button>);
+		let endIcon = screen.getByText("done");
+		expect(screen.getByRole("button")).toContainElement(endIcon);
+	});
 });
