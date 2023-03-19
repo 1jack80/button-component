@@ -45,7 +45,7 @@ p {
 }
 .button[data-variant="outline"].hover,
 .button[data-variant="outline"]:hover {
-	background-color: hsla(var(--default-text), 0.4);
+	background-color: hsla(var(--default-text), 0.3);
 }
 .button[data-variant="outline"]:active {
 	background-color: hsla(var(--default-bg));
@@ -116,4 +116,7 @@ p {
 .button[data-color="primary"][data-variant="text"],
 .button[data-color="secondary"][data-variant="text"] {
 	--default-text: var(--primary);
+}
+
+.button[data-color="primary"][data-variant="text"] {
 }
