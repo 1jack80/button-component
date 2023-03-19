@@ -20,7 +20,7 @@ const Button = forwardRef(function (
 	return (
 		<>
 			<button
-				className={`button grid grid-cols-2 gap-5 ${props.className}`}
+				className={`button ${props.className}`}
 				ref={ref}
 				data-variant={props.variant}
 				disabled={props.disabled ?? false}
@@ -28,13 +28,15 @@ const Button = forwardRef(function (
 				data-size={props.size}
 				data-disableShadow={props.disableShadow}
 				data-color={props.color}>
-				{props.startIcon ? (
-					<span className={`material-icons-round text-base mr-2`}>{props.startIcon}</span>
-				) : null}
-				<span>{props.children}</span>
-				{props.endIcon ? (
-					<span className={`material-icons-round text-base ml-2 `}>{props.endIcon}</span>
-				) : null}
+				<span className="flex items-center  gap-2">
+					{props.startIcon ? (
+						<span className={`material-icons-round text-base`}>{props.startIcon}</span>
+					) : null}
+					<span>{props.children}</span>
+					{props.endIcon ? (
+						<span className={`material-icons-round text-base`}>{props.endIcon}</span>
+					) : null}
+				</span>
 			</button>
 		</>
 	);
