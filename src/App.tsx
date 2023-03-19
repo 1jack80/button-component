@@ -51,7 +51,11 @@ function App() {
 					<article className="flex gap-32">
 						<div>
 							<p>{'<Button variant="text" />'}</p>
-							<Button variant="text">Default</Button>
+							<Button
+								variant="text"
+								color="primary">
+								Default
+							</Button>
 						</div>
 						<div>
 							<p className="hover-state">{"&:hover, &:focus"}</p>
