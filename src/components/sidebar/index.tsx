@@ -30,12 +30,12 @@ const Sidebar = () => {
 				<Button
 					variant="text"
 					disabled>
-					Buttons
+					Inputs
 				</Button>
 				<Button
 					variant="text"
 					className="font-semibold">
-					Inputs
+					Buttons
 				</Button>
 				<Button
 					variant="text"

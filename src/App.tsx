@@ -8,7 +8,7 @@ import ButtonSection from "./sections/Butons";
 
 function App() {
 	const activeSection = {
-		inputs: <ButtonSection />,
+		buttons: <ButtonSection />,
 	};
 	const [state, dispatch] = useReducer(sectionReducer, initialState);
 

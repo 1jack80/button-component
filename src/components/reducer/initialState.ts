@@ -5,4 +5,4 @@ export enum sections {
 	inputs = "inputs",
 }
 
-export const initialState: sections = sections.inputs;
+export const initialState: sections = sections.buttons;
