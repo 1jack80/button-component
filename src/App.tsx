@@ -4,7 +4,7 @@ import Button from "./components/button";
 import Sidebar from "./components/sidebar";
 import { sections, initialState } from "./components/reducer/initialState";
 import { reducer as sectionReducer } from "./components/reducer/sectionReducer";
-import ButtonSection from "./sections/Button";
+import ButtonSection from "./sections/Butons";
 
 function App() {
 	const activeSection = {
@@ -17,8 +17,9 @@ function App() {
 			<div className="App flex ">
 				<div className="bg-[#FAFBFD] px-14 py-16 sticky top-10">
 					<Sidebar />
-					{state}
 				</div>
+
+				{activeSection[state]}
 			</div>
 		</>
 	);
