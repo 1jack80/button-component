@@ -9,6 +9,12 @@ import ButtonSection from "./sections/Butons";
 function App() {
 	const activeSection = {
 		buttons: <ButtonSection />,
+		typography: <></>,
+		grid: <></>,
+		inputs: <></>,
+	};
+	const getActiveState = (state: sections) => {
+		return activeSection[state];
 	};
 	const [state, dispatch] = useReducer(sectionReducer, initialState);
 
@@ -16,10 +22,13 @@ function App() {
 		<>
 			<div className="App flex ">
 				<div className="bg-[#FAFBFD] px-14 py-16 sticky top-10">
-					<Sidebar />
+					<Sidebar
+						activeState={state}
+						dispatch={dispatch}
+					/>
 				</div>
 
-				{activeSection[state]}
+				{getActiveState(state)}
 			</div>
 		</>
 	);

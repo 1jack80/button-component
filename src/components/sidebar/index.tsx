@@ -1,10 +1,16 @@
-import React from "react";
+import React, { Dispatch } from "react";
 import Button from "../button";
+import { sections } from "../reducer/initialState";
 
 const bg1 = " linear-gradient(0deg, #090F31, #090F31)";
 const bg2 = "linear-gradient(0deg, #F7542E, #F7542E);";
 
-const Sidebar = () => {
+interface sidebar {
+	activeState: sections;
+	dispatch: Dispatch<any>;
+}
+
+const Sidebar: React.FC<sidebar> = () => {
 	return (
 		<section className=" w-max sticky top-16">
 			<h5 className="logo text-xl font-semibold w-max mx-5">
@@ -48,3 +54,13 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
+function ButtonWrapper() {
+	return (
+		<Button
+			variant="text"
+			disabled>
+			Grid
+		</Button>
+	);
+}
