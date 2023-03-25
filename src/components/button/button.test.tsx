@@ -15,22 +15,22 @@ describe("testing various button functionalities", () => {
 
 	it("should accept different variants", () => {
 		render(<Button variant="outline">button</Button>);
-		expect(screen.getByText("button")).toHaveAttribute("data-variant");
+		expect(screen.getByRole("button")).toHaveAttribute("data-variant");
 	});
 
 	it("should be disabled when the disabled prop is given", () => {
 		render(<Button disabled>button</Button>);
-		expect(screen.getByText("button")).toBeDisabled();
+		expect(screen.getByRole("button")).toBeDisabled();
 	});
 
 	it("should accept size prop values", () => {
 		render(<Button size="lg">button</Button>);
-		expect(screen.getByText("button")).toHaveAttribute("data-size");
+		expect(screen.getByRole("button")).toHaveAttribute("data-size");
 	});
 
 	it("should accept color prop values", () => {
 		render(<Button color="primary">button</Button>);
-		expect(screen.getByText("button")).toHaveAttribute("data-color");
+		expect(screen.getByRole("button")).toHaveAttribute("data-color");
 	});
 
 	it("should render the icons given", () => {
